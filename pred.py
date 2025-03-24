@@ -438,8 +438,8 @@ def process(A):
             A[col] = A[col].astype(float)
     
     # Print column types for debugging
-    print("Column types after processing:")
-    print(A.dtypes.head())
+    # print("Column types after processing:")
+    # print(A.dtypes.head())
     
     return A
 
@@ -569,13 +569,13 @@ def predict_all(filename):
     Make predictions for all samples in the given file.
     """
     # Print debug information
-    print(f"Reading file: {filename}")
+    # print(f"Reading file: {filename}")
     
     # Read the CSV file into a pandas DataFrame
     try:
         df = pd.read_csv(filename)
-        print(f"File read successfully. Shape: {df.shape}")
-        print(f"Columns: {df.columns.tolist()}")
+        # print(f"File read successfully. Shape: {df.shape}")
+        # print(f"Columns: {df.columns.tolist()}")
     except Exception as e:
         print(f"Error reading file {filename}: {e}")
         return []
