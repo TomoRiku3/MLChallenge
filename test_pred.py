@@ -10,7 +10,7 @@ from collections import Counter
 import time
 
 # Import the prediction code
-from example_pred import predict_all, process
+from pred import predict_all, process
 
 def test_model():
     """
@@ -33,7 +33,7 @@ def test_model():
     
     # Split the data into train and test sets
     print("\nSplitting data into train/test sets...")
-    X_train, X_test = train_test_split(df, test_size=0.2, random_state=42)
+    X_train, X_test = train_test_split(df, test_size=0.2, random_state=142)
     
     # Save the test set to a temporary CSV file
     test_file = "temp_test_data.csv"

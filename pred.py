@@ -414,7 +414,7 @@ def process(A):
         A[LABEL] = A[LABEL].apply(process_label)
 
     # Drop Q5 and Q6
-    A = A.drop(columns=[Q5, Q6], errors="ignore")
+    A = A.drop(columns=[Q5, Q6, 'id'], errors="ignore")
 
     # Multi-label binarize Q3 list using custom implementation
     mlb_q3 = CustomMultiLabelBinarizer()
